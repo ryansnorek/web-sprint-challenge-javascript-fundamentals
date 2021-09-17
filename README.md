@@ -26,13 +26,31 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. Explain the differences between `.map`, `.reduce` and `.filter` and describe a use case for each. 
 
+    `.map`, `.reduce`, and `.filter` are all array methods that are hard-coded into JavaScript and take anonymous functions as parameters. They are designed to loop through the array and apply instructions we set to each element.
+
+    `.map` returns a new array so it requires a return statement. It applies a function that can be coded to change the data in the array, such as multiplying everything by 10, or applying another function to each element.
+
+    `.reduce`, returns a single value and needs a return statement to work. It also requires 2 parameters: the accumulator and the current value. The accumulator can be set as the initial value. As each element of the array is looped over, we can apply a function or set of instructions to the element (current value) and then apply it to the accumulator. A common use case for `.reduce` is adding large amounts of data together. The accumulator is what is returned. 
+    
+
 2. Explain the difference between a callback and a higher order function.
+
+    A callback function is passed into a higher order function as an arguement. It calls back to the functionality from within athe higher order function. 
 
 3. Explain what a closure is.
 
+    Closure is a functions ability to access scopes outside of it's own scope. The outer scope cannnot access the inner funciton scope because it is closed off. The only way to access what is within a function is to invoke it and save the return value.
+
 4. Describe the four principles of the 'this' keyword.
 
+    Window binding: The default object that 'this' references is the browser window.
+    Implicit binding: The object to the left of the . is what 'this' references.
+    Explicit binding: Using a method like `.call` to bind an object to 'this'
+    New keyword binding: 'this' references the new object created by the constructor
+
 5. Why do we need super() in an extended class?
+
+    `super()` replaces the binding method `.call`. It binds the constructor to whatever properties the parent class is extending.
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade. 
 
